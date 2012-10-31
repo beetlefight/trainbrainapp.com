@@ -293,7 +293,6 @@ img {
   border-bottom: 1px solid #e5e5e5;
 }
 .container.l-header {
-  height: 90px;
   padding: 0;
   margin: 0;
   width: 100%;
@@ -429,6 +428,17 @@ nav ul li.bb-app:hover {
     background-size: 50px 50px;
   }
 }
+nav ul li.selected:hover {
+  background-image: url('/img/icon_tb.png');
+  background-repeat: no-repeat;
+  background-color: #ffd93e;
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  nav ul li.selected:hover {
+    background-image: url('/img/icon_tb@2x.png');
+    background-size: 50px 50px;
+  }
+}
 div.screen p {
   color: #666;
   font-size: 100%;
@@ -437,47 +447,53 @@ div.screen p {
 /*
 Main content ---------------------------------------- */
 .main {
-  margin: 50px auto 0 auto;
+  margin: 0 auto 0 auto;
   text-align: left;
 }
 .main .iphone {
   background-image: url('/img/iphone.png');
   background-repeat: no-repeat;
-  height: 782px;
+  height: 788px;
   background-position: 70px 0;
-  width: 50%;
+  width: 50.40%;
   float: left;
+  margin: 50px 0 0 0;
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
   .main .iphone {
     background-image: url('/img/iphone@2x.png');
-    background-size: 354px 782px;
+    background-size: 343px 788px;
   }
 }
 .main .message {
-  width: 45%;
+  width: 43%;
   float: right;
-  padding: 40px 0 0 0;
+  padding: 100px 0 0 0;
 }
 .main .message h1 {
   font-size: 400%;
   font-weight: normal;
   line-height: 1em;
+  margin: 10px 0 10px 0;
 }
 .main .message a.appstore {
   background-image: url('/img/btn_appstore.png');
   background-repeat: no-repeat;
   display: block;
-  height: 52px;
-  width: 164px;
+  height: 48px;
+  width: 166px;
   text-indent: -9999px;
   margin: 30px 0 0 0;
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
   .main .message a.appstore {
     background-image: url('/img/btn_appstore@2x.png');
-    background-size: 164px 52px;
+    background-size: 166px 48px;
   }
+}
+.main .message p {
+  line-height: 1.7em;
+  font-size: 110%;
 }
 .main .message p.hand {
   font: normal 100%/1em "daniel", cursive, sans-serif;
@@ -526,17 +542,17 @@ Footer ---------------------------------------- */
   padding: 50px 0;
 }
 .footer p {
-  color: #FFF;
+  color: #ccc;
   font-size: 90%;
   margin: 5px 0;
   text-align: left;
 }
 .footer p span {
-  color: #FFF;
+  color: #ccc;
   font-size: 150%;
 }
 .footer a {
-  color: #FFF;
+  color: #ccc;
   text-decoration: none;
 }
 .footer a:hover {
@@ -549,11 +565,38 @@ Footer ---------------------------------------- */
 /*
 Media Queries ---------------------------------------- */
 @media screen and (max-width: 1024px) {
+  .main {
+    width: 90%;
+  }
   .header {
     width: 100%;
   }
   h1.logo {
     margin-left: 20px;
+  }
+  .main .message {
+    padding: 40px 0 0 40px;
+    width: 42%;
+  }
+  .main .message h1 {
+    margin-bottom: 20px;
+    line-height: .9em;
+  }
+  .main .message p.hand {
+    line-height: 1.6em;
+  }
+  div.screen p {
+    height: 70px;
+  }
+  .secondary {
+    width: 95%;
+  }
+  .secondary .screen {
+    width: 26.5%;
+    padding: 0 3%;
+  }
+  .secondary .screen h2 {
+    font-size: 84%;
   }
 }
 @media screen and (max-width: 640px) {
@@ -664,13 +707,16 @@ Media Queries ---------------------------------------- */
     background-color: #f9f9f9;
   }
   .main .iphone {
-    background: url(/img/iphone.png) no-repeat center top;
-    background-size: 90%;
+    background-image: url('/img/iphone.png');
+    background-repeat: no-repeat;
+    background-size: 80%;
     height: 400px;
+    background-position: center top;
     width: 100%;
-    float: left;
-    margin: 30px auto 0 auto;
-    text-align: center;
+    margin: 30px 0 0 0;
+    -webkit-box-shadow: inset 0 -10px 20px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 -10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 -10px 20px rgba(0, 0, 0, 0.1);
   }
   .main .message {
     clear: left;
@@ -686,7 +732,7 @@ Media Queries ---------------------------------------- */
     margin: 10px 0;
   }
   .main .message p {
-    padding: 5px 15px;
+    padding: 5px 10px;
     margin: 5px 0;
   }
   .main .message p.hand {
@@ -694,7 +740,7 @@ Media Queries ---------------------------------------- */
     margin: 0;
   }
   .main .message a.appstore {
-    margin: 0 auto 20px auto;
+    margin: 10px auto 20px auto;
   }
   .header,
   .main,
@@ -762,7 +808,6 @@ Media Queries ---------------------------------------- */
     width: 90%;
   }
   .footer p {
-    color: #FFF;
     font-size: 100%;
     margin: 5px 0;
     text-align: center;
@@ -778,5 +823,11 @@ Media Queries ---------------------------------------- */
   {
     background-image: url('/img/logo@2x.png');
     background-size: 202px 50px;
+  }
+}
+@media screen and (max-width: 640px) and all and (-webkit-min-device-pixel-ratio: 1.5) {
+  {
+    background-image: url('/img/iphone@2x.png');
+    background-size: auto auto;
   }
 }

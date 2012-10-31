@@ -40,7 +40,7 @@ img {
 }
 
 .container.l-header {
-    height: 90px;
+    // height: 90px;
     padding: 0;
     margin: 0;
     width: 100%;
@@ -146,6 +146,11 @@ nav ul li.bb-app:hover {
   background-color: #f9f9f9;
 }
 
+nav ul li.selected:hover {
+  .at2x('/img/icon_tb.png', 50px, 50px);
+  background-color: @yellow;
+}
+
 div.screen p {
   color:  #666;
   font-size: 100%;
@@ -160,37 +165,44 @@ div.screen p {
 Main content ---------------------------------------- */
 
 .main {
-  margin: 50px auto 0 auto;
+  margin: 0 auto 0 auto;
   text-align: left;
 
   .iphone {
-    .at2x('/img/iphone.png', 354px, 782px);
-    height:  782px;
+    .at2x('/img/iphone.png', 343px, 788px);
+    height:  788px;
     background-position: 70px 0;
-    width: 50%;
+    width: 50.40%;
     float: left;
+    margin: 50px 0 0 0;
   }
 
   .message {
 
-    width: 45%;
+    width: 43%;
     float: right;
-    padding: 40px 0 0 0;
+    padding: 100px 0 0 0;
 
 
     h1 {
       font-size: 400%;
       font-weight: normal;
       line-height: 1em;
+      margin: 10px 0 10px 0;
     }
 
     a.appstore {
-      .at2x('/img/btn_appstore.png', 164px, 52px);
+      .at2x('/img/btn_appstore.png', 166px, 48px);
       display: block;
-      height: 52px;
-      width: 164px;
+      height: 48px;
+      width: 166px;
       text-indent: -9999px;
       margin: 30px 0 0 0;
+    }
+
+    p {
+      line-height: 1.7em;
+      font-size: 110%;
     }
 
     p.hand {
@@ -199,7 +211,7 @@ Main content ---------------------------------------- */
       margin: 15px 0;
     }
 
-      h1 span {
+    h1 span {
       font-weight: bold;
       color: @yellow;
     }
@@ -261,19 +273,19 @@ Footer ---------------------------------------- */
   padding: 50px 0;
   
   p {
-    color: #FFF;
+    color: #ccc;
     font-size: 90%;
     margin: 5px 0;
     text-align: left;
   }
   
   p span {
-    color: #FFF;
+    color: #ccc;
     font-size: 150%;
   }
   
   a {
-    color: #FFF;
+    color: #ccc;
     text-decoration: none;
   }
   
@@ -294,12 +306,47 @@ Media Queries ---------------------------------------- */
 
 @media screen and (max-width: 1024px) {
 
+  .main {
+    width: 90%;
+  }
+
   .header {
     width: 100%;
   }
 
   h1.logo {
     margin-left: 20px;
+  }
+
+  .main .message {
+    padding: 40px 0 0 40px;
+    width: 42%;
+  }
+
+  .main .message h1 {
+    margin-bottom: 20px;
+    line-height: .9em;
+  }
+
+  .main .message p.hand {
+    line-height: 1.6em;
+  }
+  
+  div.screen p {
+    height:  70px;
+  }
+  
+  .secondary {
+    width:  95%;
+  }
+  
+  .secondary .screen {
+    width: 26.5%;
+    padding: 0 3%
+  }
+  
+  .secondary .screen h2 {
+    font-size:  84%;
   }
 
 }
@@ -434,15 +481,17 @@ Media Queries ---------------------------------------- */
   .main {
 
     .iphone {
-      // .at2x('/img/iphone.png', 354px, 782px);
-      background: url(/img/iphone.png) no-repeat center top ;
-      background-size: 90%;
-      height:  400px;
-      // background-position: 0 0;
+      // .at2x('/img/iphone.png', 343px, 788px);
+      .at2x('/img/iphone.png');
+      background-size: 80%;
+      height: 400px;
+      background-position: center top;
       width: 100%;
-      float: left;
-      margin: 30px auto 0 auto;
-      text-align: center;
+      // float: left;
+      margin: 30px 0 0 0;
+      // text-align: center;
+      // border-bottom: 1px solid #CCC;
+      .drop-shadow-dark(inset 0, -10px, 20px, .1);
     }
     .message {
       clear: left;
@@ -459,7 +508,7 @@ Media Queries ---------------------------------------- */
       }
 
       p {
-        padding: 5px 15px;
+        padding: 5px 10px;
         margin: 5px 0;
       }
 
@@ -469,7 +518,7 @@ Media Queries ---------------------------------------- */
       }
 
       a.appstore {
-        margin: 0 auto 20px auto;
+        margin: 10px auto 20px auto;
       }
 
     }
@@ -554,7 +603,7 @@ Media Queries ---------------------------------------- */
     width: 90%;
   
     p {
-      color: #FFF;
+      // color: #FFF;
       font-size: 100%;
       margin: 5px 0;
       text-align: center;
