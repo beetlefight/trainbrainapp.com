@@ -1,0 +1,782 @@
+@import "normalize.css";
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+body {
+  font-size: 1em;
+  line-height: 1.4;
+}
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+img {
+  vertical-align: middle;
+}
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical;
+}
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Image replacement
+ */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+
+  *text-indent: -9999px;
+}
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+}
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+.invisible {
+  visibility: hidden;
+}
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+.clearfix:after {
+  clear: both;
+}
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+  *zoom: 1;
+}
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  /* Style adjustments for high resolution devices */
+}
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+  
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+       * Don't show links for images, or javascript/internal links
+       */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  @page  {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+/*---------------------------------------------------
+    LESS Elements 0.6
+  ---------------------------------------------------
+    A set of useful LESS mixins by Dmitry Fadeyev
+    Special thanks for mixin suggestions to:
+      Kris Van Herzeele,
+      Benoit Adam,
+      Portenart Emile-Victor,
+      Ryan Faerman
+
+    More info at: http://lesselements.com
+-----------------------------------------------------*/
+/* colors */
+body {
+  background-image: url('/img/tracks.png');
+  background-repeat: no-repeat;
+  background-color: #f7f7f7;
+  background-position: center top;
+  text-align: center;
+  margin: 0 auto;
+  font-family: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  body {
+    background-image: url('/img/tracks@2x.png');
+    background-size: 285px 1800px;
+  }
+}
+img {
+  max-width: 100%;
+}
+.container {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  clear: left;
+}
+.header,
+.main,
+.secondary,
+.footer {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.container.l-footer {
+  background: #111;
+}
+.container.l-secondary {
+  background: #FFF;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+.container.l-header {
+  height: 90px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background: #FFF;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+h1.logo {
+  width: 202px;
+  height: 50px;
+  padding: 0;
+  margin: 20px 0 0 0;
+  background-image: url('/img/logo.png');
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  float: left;
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  h1.logo {
+    background-image: url('/img/logo@2x.png');
+    background-size: 202px 50px;
+  }
+}
+h2 {
+  font-weight: normal;
+  font-size: 130%;
+  line-height: 1.3em;
+}
+/*
+nav ---------------------------------------- */
+nav {
+  float: right;
+}
+nav ul {
+  margin: 0;
+}
+nav ul li {
+  float: left;
+  list-style: none;
+  text-align: center;
+  position: relative;
+  width: 120px;
+  background-position: 50% 13px;
+  border-left: 1px solid #CCC;
+}
+nav ul li a {
+  height: 90px;
+  color: #333;
+  height: 89px;
+  display: block;
+  font: bold 12px/1.5em proxima-nova;
+  text-decoration: none;
+}
+nav ul li:last-child {
+  border-right: 1px solid #CCC;
+}
+nav ul li a:hover {
+  color: #333;
+}
+nav ul li a span {
+  top: 65px;
+  position: relative;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+  margin: 0 auto;
+}
+nav ul li.feedback {
+  background-image: url('/img/icon_feedback.png');
+  background-repeat: no-repeat;
+  background-position: 50% 20px;
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  nav ul li.feedback {
+    background-image: url('/img/icon_feedback@2x.png');
+    background-size: 34px 36px;
+  }
+}
+nav ul li.selected {
+  background-color: #ffd93e;
+  color: #FFF;
+}
+nav ul li.feedback a:hover {
+  background-color: #f9f9f9;
+  background-image: url('/img/icon_feedback.png');
+  background-repeat: no-repeat;
+  background-position: 50% 20px;
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  nav ul li.feedback a:hover {
+    background-image: url('/img/icon_feedback@2x.png');
+    background-size: 34px 36px;
+  }
+}
+nav ul li.tb-app {
+  background-image: url('/img/icon_tb.png');
+  background-repeat: no-repeat;
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  nav ul li.tb-app {
+    background-image: url('/img/icon_tb@2x.png');
+    background-size: 50px 50px;
+  }
+}
+nav ul li.tb-app:hover {
+  background-image: url('/img/icon_tb.png');
+  background-repeat: no-repeat;
+  background-color: #f9f9f9;
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  nav ul li.tb-app:hover {
+    background-image: url('/img/icon_tb@2x.png');
+    background-size: 50px 50px;
+  }
+}
+nav ul li.bb-app {
+  background-image: url('/img/icon_bb.png');
+  background-repeat: no-repeat;
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  nav ul li.bb-app {
+    background-image: url('/img/icon_bb@2x.png');
+    background-size: 50px 50px;
+  }
+}
+nav ul li.bb-app:hover {
+  background-image: url('/img/icon_bb.png');
+  background-repeat: no-repeat;
+  background-color: #f9f9f9;
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  nav ul li.bb-app:hover {
+    background-image: url('/img/icon_bb@2x.png');
+    background-size: 50px 50px;
+  }
+}
+div.screen p {
+  color: #666;
+  font-size: 100%;
+  height: 50px;
+}
+/*
+Main content ---------------------------------------- */
+.main {
+  margin: 50px auto 0 auto;
+  text-align: left;
+}
+.main .iphone {
+  background-image: url('/img/iphone.png');
+  background-repeat: no-repeat;
+  height: 782px;
+  background-position: 70px 0;
+  width: 50%;
+  float: left;
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  .main .iphone {
+    background-image: url('/img/iphone@2x.png');
+    background-size: 354px 782px;
+  }
+}
+.main .message {
+  width: 45%;
+  float: right;
+  padding: 40px 0 0 0;
+}
+.main .message h1 {
+  font-size: 400%;
+  font-weight: normal;
+  line-height: 1em;
+}
+.main .message a.appstore {
+  background-image: url('/img/btn_appstore.png');
+  background-repeat: no-repeat;
+  display: block;
+  height: 52px;
+  width: 164px;
+  text-indent: -9999px;
+  margin: 30px 0 0 0;
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  .main .message a.appstore {
+    background-image: url('/img/btn_appstore@2x.png');
+    background-size: 164px 52px;
+  }
+}
+.main .message p.hand {
+  font: normal 100%/1em "daniel", cursive, sans-serif;
+  color: #666666;
+  margin: 15px 0;
+}
+.main .message h1 span {
+  font-weight: bold;
+  color: #ffd93e;
+}
+/*
+Secondary Content ---------------------------------------- */
+.secondary {
+  padding: 40px 0 50px 0;
+}
+.secondary .screen {
+  margin: 0 auto;
+  text-align: left;
+  width: 24.5%;
+  float: left;
+  padding: 0 4.8%;
+}
+.secondary .screen h2 {
+  padding: 0 8px;
+  font-size: 100%;
+}
+.secondary .screen p {
+  padding: 0 8px;
+  font-size: 80%;
+}
+.secondary .screenshot {
+  margin: 0;
+  padding: 0;
+}
+.secondary .screen:last-child {
+  padding-right: 3.5%;
+}
+.secondary .screen:first-child {
+  padding-left: 3.5%;
+}
+/*
+Footer ---------------------------------------- */
+.footer {
+  clear: left;
+  margin-top: 100px;
+  padding: 50px 0;
+}
+.footer p {
+  color: #FFF;
+  font-size: 90%;
+  margin: 5px 0;
+  text-align: left;
+}
+.footer p span {
+  color: #FFF;
+  font-size: 150%;
+}
+.footer a {
+  color: #FFF;
+  text-decoration: none;
+}
+.footer a:hover {
+  color: #ffd93e;
+}
+.footer p.legal {
+  font-size: 70%;
+  color: #666;
+}
+/*
+Media Queries ---------------------------------------- */
+@media screen and (max-width: 1024px) {
+  .header {
+    width: 100%;
+  }
+  h1.logo {
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 640px) {
+  {
+    /*
+    nav ---------------------------------------- */
+  
+  }
+  body {
+    background-image: none;
+    background-color: #f7f7f7;
+    text-align: center;
+    margin: 0 auto;
+    font-family: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+  }
+  .container.l-header {
+    height: auto;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background: #FFF;
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+  h1.logo {
+    width: 202px;
+    height: 50px;
+    padding: 0;
+    margin: 20px auto 20px auto;
+    background-image: url('/img/logo.png');
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    float: none;
+  }
+  nav {
+    float: left;
+    clear: both;
+    width: 100%;
+  }
+  nav ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: #eaeaea;
+    float: left;
+  }
+  nav ul li {
+    float: left;
+    list-style: none;
+    text-align: center;
+    position: relative;
+    width: 33.333333%;
+    border-left: none;
+    border-right: none;
+  }
+  nav ul li:last-child {
+    border-right: none;
+  }
+  nav ul li a {
+    height: 90px;
+    color: #333;
+    height: auto;
+    display: block;
+    font: bold 12px/1.5em proxima-nova;
+    text-decoration: none;
+    padding: 15px 0;
+  }
+  nav ul li a span {
+    top: auto;
+    position: relative;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+    margin: 0 auto;
+    font-size: 120%;
+  }
+  nav ul li.selected a {
+    background-color: #ffd93e;
+    color: #ffd93e;
+  }
+  nav ul li.selected span {
+    color: #333;
+  }
+  nav ul li {
+    background-image: none;
+  }
+  nav ul li a span {
+    color: #666;
+  }
+  nav ul li.feedback {
+    background: none;
+  }
+  nav ul li.feedback a:hover {
+    background-image: none;
+  }
+  nav ul li.tb-app {
+    background: none;
+  }
+  nav ul li.tb-app:hover {
+    background: none;
+    background-color: #f9f9f9;
+  }
+  nav ul li.bb-app {
+    background: none;
+  }
+  nav ul li.bb-app:hover {
+    background: none;
+    background-color: #f9f9f9;
+  }
+  .main .iphone {
+    background: url(/img/iphone.png) no-repeat center top;
+    background-size: 90%;
+    height: 400px;
+    width: 100%;
+    float: left;
+    margin: 30px auto 0 auto;
+    text-align: center;
+  }
+  .main .message {
+    clear: left;
+    float: left;
+    width: 100%;
+    margin: 10px auto 0 auto;
+    padding: 10px 0 30px 0;
+    text-align: center;
+  }
+  .main .message h1 {
+    font-size: 250%;
+    width: 100%;
+    margin: 10px 0;
+  }
+  .main .message p {
+    padding: 5px 15px;
+    margin: 5px 0;
+  }
+  .main .message p.hand {
+    line-height: 1.5em;
+    margin: 0;
+  }
+  .main .message a.appstore {
+    margin: 0 auto 20px auto;
+  }
+  .header,
+  .main,
+  .secondary,
+  .footer {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .secondary {
+    padding: 0;
+  }
+  .secondary .screenshot {
+    margin: 0;
+    padding: 0;
+  }
+  .secondary .screen:last-child {
+    padding-right: 3.5%;
+  }
+  .secondary .screen:first-child {
+    padding-left: 3.5%;
+  }
+  .secondary .screen {
+    margin: 20px auto 50px auto;
+    width: 100%;
+    float: left;
+    padding: 0;
+    text-align: center;
+  }
+  .secondary .screen h2 {
+    padding: 0 0;
+    margin: 0 auto 5px auto;
+    font-size: 150%;
+    width: 90%;
+    text-align: center;
+  }
+  .secondary .screen p {
+    padding: 0;
+    font-size: 100%;
+    width: 70%;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    height: auto;
+  }
+  .secondary .screen img {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 245px;
+  }
+  .secondary .screenshot {
+    margin: 0;
+    padding: 0;
+  }
+  .secondary .screen:last-child {
+    padding-right: 0;
+  }
+  .secondary .screen:first-child {
+    padding-left: 0;
+  }
+  .footer {
+    text-align: center;
+    clear: left;
+    margin-top: 0;
+    padding: 40px 0;
+    width: 90%;
+  }
+  .footer p {
+    color: #FFF;
+    font-size: 100%;
+    margin: 5px 0;
+    text-align: center;
+  }
+  .footer p span {
+    font-size: 100%;
+  }
+  .footer p.legal {
+    font-size: 70%;
+  }
+}
+@media screen and (max-width: 640px) and all and (-webkit-min-device-pixel-ratio: 1.5) {
+  {
+    background-image: url('/img/logo@2x.png');
+    background-size: 202px 50px;
+  }
+}
