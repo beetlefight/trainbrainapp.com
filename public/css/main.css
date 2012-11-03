@@ -811,7 +811,7 @@ Media Queries ---------------------------------------- */
 @media screen and (max-width: 640px) and all and (-webkit-min-device-pixel-ratio: 1.5) {
   {
     background-image: url('/img/logo@2x.png');
-    background-size: 202px 50px;
+    background-size: auto auto;
   }
 }
 @media screen and (max-width: 640px) and all and (-webkit-min-device-pixel-ratio: 1.5) {
