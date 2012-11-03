@@ -333,7 +333,7 @@ nav ul li a {
   color: #333;
   height: 89px;
   display: block;
-  font: bold 12px/1.5em "proxima-nova";
+  font: bold 12px/1.5em "proxima-nova", "Helvetica Neue", Helvetica, sans-serif;
   text-decoration: none;
 }
 nav ul li:last-child {
@@ -485,7 +485,7 @@ Main content ---------------------------------------- */
   font-size: 110%;
 }
 .main .message p.hand {
-  font: normal 100% "daniel", cursive, sans-serif;
+  font: normal 100% "daniel", cursive, Georgia, serif;
   color: #666666;
   margin: 15px 0;
 }
