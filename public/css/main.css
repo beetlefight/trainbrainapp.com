@@ -166,17 +166,6 @@ textarea {
   *zoom: 1;
 }
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   Theses examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
-  /* Style adjustments for high resolution devices */
-}
-/* ==========================================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r
    ========================================================================== */
@@ -258,7 +247,7 @@ body {
   background-position: center top;
   text-align: center;
   margin: 0 auto;
-  font-family: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
@@ -344,7 +333,7 @@ nav ul li a {
   color: #333;
   height: 89px;
   display: block;
-  font: bold 12px/1.5em proxima-nova;
+  font: bold 12px/1.5em "proxima-nova";
   text-decoration: none;
 }
 nav ul li:last-child {
@@ -496,7 +485,7 @@ Main content ---------------------------------------- */
   font-size: 110%;
 }
 .main .message p.hand {
-  font: normal 100%/1em "daniel", cursive, sans-serif;
+  font: normal 100% "daniel", cursive, sans-serif;
   color: #666666;
   margin: 15px 0;
 }
