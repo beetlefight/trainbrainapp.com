@@ -369,7 +369,7 @@ Media Queries ---------------------------------------- */
     margin: 0;
     width: 100%;
     background: #FFF;
-    .drop-shadow-dark(0, 3px, 5px, .1);
+    .drop-shadow-dark(0, 3px, 5px, 0);
   }
 
   h1.logo {
@@ -377,7 +377,6 @@ Media Queries ---------------------------------------- */
     height: 50px;
     padding: 0;
     margin: 20px auto 20px auto;
-    .at2x('/img/logo.png');
     text-indent: -9999px;
     float: none;
   }
@@ -481,16 +480,11 @@ Media Queries ---------------------------------------- */
   .main {
 
     .iphone {
-      // .at2x('/img/iphone.png', 343px, 788px);
-      .at2x('/img/iphone.png');
       background-size: 80%;
       height: 400px;
-      background-position: center top;
+      background-position: center 50px;
       width: 100%;
-      // float: left;
-      margin: 30px 0 0 0;
-      // text-align: center;
-      // border-bottom: 1px solid #CCC;
+      margin: 0 0 0 0;
       .drop-shadow-dark(inset 0, -10px, 20px, .1);
     }
     .message {
